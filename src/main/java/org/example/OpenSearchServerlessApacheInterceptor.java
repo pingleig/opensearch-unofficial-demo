@@ -114,9 +114,9 @@ public class OpenSearchServerlessApacheInterceptor implements HttpRequestInterce
         SdkHttpFullRequest signedRequest = signer.sign(requestBuilder.build(), attributes);
 
         // Now copy everything back
+        Header[] headers = request.getHeaders("content-length");
         request.setHeaders(mapToHeaderArray(signedRequest.headers()));
         // Copy Content-Length header back
-        Header[] headers = request.getHeaders("content-length");
         if (headers != null) {
             Arrays.stream(headers)
                     .filter(h -> !"0".equals(h.getValue()))
