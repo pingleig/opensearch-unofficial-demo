@@ -20,7 +20,7 @@ It is NOT meant for production, use at your own risk. This is NOT an official AW
 
 ## TODO
 
-- [ ] docker compose https://github.com/opensearch-project/opensearch-java/issues/236
+- [x] docker compose https://github.com/opensearch-project/opensearch-java/issues/236
 - [ ] managed domain?
 
 ## Usage
